@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 40%;
+  padding: 30px;
+  background-color: #5E7AC3;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.container h1{
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.container ul{
+  padding-top: 27px;
+  list-style: none;
+}
+
+.container ul i{
+  padding: 0 4px;
+}
+
+.container ul i.fa-hand-point-right{
+  padding-right: 10px;
+}
+
+.container input{
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 2px;
+  outline: none;
+  border: 0;
+
+}
+
+.container input::placeholder{
+text-align: center;
+}
