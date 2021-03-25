@@ -16,13 +16,14 @@
         <input type="text" v-model="inputText" placeholder="Add a new todo" @keyup.enter="add">
         <ul>
           <!-- STAMPO UN LI PER OGNI OGGETTO PRESENTE NELL'ARRAY TODOS -->
-          <li v-for="todo in todos">
+          <li v-for="todo in todosComputed">
             <span class=hand-point><i class="far fa-hand-point-right" v-if="todo.status == 'todo'"></i></span>
-            <!-- STAMPO IL TITLE DELL'OGGETTO TODO IN TODOS -->
+            <!-- STAMPO IL TITLE DELL'OGGETTO todo IN TODOS -->
+            <!-- allo status done mostro l'icona trash, allo status todo mostro le altre icone -->
             <span class="title" :class="(todo.status == 'done')? 'removed': '' ">{{todo.title}}</span>
-            <span class="check" v-if="todo.status == 'todo'"><i class="far fa-check-square"></i></span>
+            <span class="check" v-if="todo.status == 'todo'" @click="check(todo)"><i class="far fa-check-square"></i></span>
             <span class="edit" v-if="todo.status == 'todo'"><i class="far fa-edit"></i></span>
-            <span class="remove"><i class="far fa-trash-alt" v-if="todo.status == 'done'"></i></span>
+            <span class="remove" @click="remove(todo)"><i class="far fa-trash-alt" v-if="todo.status == 'done'"></i></span>
           </li>
         </ul>
 

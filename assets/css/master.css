@@ -13,7 +13,7 @@
 }
 
 .container{
-  width: 40%;
+  width: 45%;
   padding: 30px;
   background-color: #5E7AC3;
   color: #fff;
@@ -29,6 +29,10 @@
 .container ul{
   padding-top: 27px;
   list-style: none;
+}
+
+.container ul li{
+  line-height: 25px;
 }
 
 .container ul i{
