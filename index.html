@@ -17,11 +17,12 @@
         <ul>
           <!-- STAMPO UN LI PER OGNI OGGETTO PRESENTE NELL'ARRAY TODOS -->
           <li v-for="todo in todos">
-            <span class=hand-point><i class="far fa-hand-point-right"></i></span>
+            <span class=hand-point><i class="far fa-hand-point-right" v-if="todo.status == 'todo'"></i></span>
             <!-- STAMPO IL TITLE DELL'OGGETTO TODO IN TODOS -->
-            <span class="title">{{todo.title}}</span>
-            <span class="check"><i class="far fa-check-square"></i></span>
-            <span class="edit"><i class="far fa-edit"></i></span>
+            <span class="title" :class="(todo.status == 'done')? 'removed': '' ">{{todo.title}}</span>
+            <span class="check" v-if="todo.status == 'todo'"><i class="far fa-check-square"></i></span>
+            <span class="edit" v-if="todo.status == 'todo'"><i class="far fa-edit"></i></span>
+            <span class="remove"><i class="far fa-trash-alt" v-if="todo.status == 'done'"></i></span>
           </li>
         </ul>
 

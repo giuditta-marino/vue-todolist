@@ -52,3 +52,8 @@
 .container input::placeholder{
 text-align: center;
 }
+
+
+.container ul .title.removed{
+  text-decoration: line-through;
+}
