@@ -13,11 +13,13 @@
     <div id="root">
       <div class="container">
         <h1>Todo list</h1>
-        <input type="text" name="" value="" placeholder="Add a new todo">
+        <input type="text" v-model="inputText" placeholder="Add a new todo" @keyup.enter="add">
         <ul>
-          <li>
+          <!-- STAMPO UN LI PER OGNI OGGETTO PRESENTE NELL'ARRAY TODOS -->
+          <li v-for="todo in todos">
             <span class=hand-point><i class="far fa-hand-point-right"></i></span>
-            <span class="title">Fare la spesa</span>
+            <!-- STAMPO IL TITLE DELL'OGGETTO TODO IN TODOS -->
+            <span class="title">{{todo.title}}</span>
             <span class="check"><i class="far fa-check-square"></i></span>
             <span class="edit"><i class="far fa-edit"></i></span>
           </li>

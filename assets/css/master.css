@@ -46,7 +46,7 @@
   border-radius: 2px;
   outline: none;
   border: 0;
-
+  text-align: center;
 }
 
 .container input::placeholder{
