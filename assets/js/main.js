@@ -45,19 +45,21 @@ var root = new Vue({
         }
         this.todos.push(obj);
         this.inputText = '';
-      }    
+      }
     },
 
+    // AL CHECK PER OGNI TODO IN todosComputed
     check: function(todo) {
-
       let index = this.todos.indexOf(todo);
       this.todos[index].status = 'done';
+
+      console.log(this.todos.indexOf(todo));
+      console.log(this.todosComputed.indexOf(todo));
     },
 
     remove: function(todo) {
-
       let index = this.todos.indexOf(todo);
-      console.log(index);
+
       this.todos.splice(index, 1);
     }
 
